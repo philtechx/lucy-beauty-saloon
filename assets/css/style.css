@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 72px;
+    margin: 0;
+}
+
+/* Pink theme */
+.text-pink {
+    color: #ff69b4 !important;
+}
+
+.btn-pink {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: #ff85c1;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* Overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Hero content */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+section h2 {
+    font-weight: 700;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}
+
+/* Smooth hover */
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+}
